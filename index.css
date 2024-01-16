@@ -16,7 +16,7 @@ header{
     padding:0 0 30px 0;
 }
 
-#search-input {
+.search-input {
     background-color: aliceblue;
     border: none;
     padding: 15px 20px;
@@ -25,7 +25,7 @@ header{
     font-size: 16px;
 }
 
-#submit-input {
+.submit-input {
     background-color: bisque
     ;
     font-size: 16px;
