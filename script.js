@@ -29,7 +29,7 @@ if (minutes < 10){
     `minutes = 0${minutes}`;
 }
  
-return `${day} ${hours}:${minutes};
+return `${day} ${hours}:${minutes}`;
 }
 function cityResult(city) {
     let apiKey = "aod048etf33b73a958b75839ca060b4e";
