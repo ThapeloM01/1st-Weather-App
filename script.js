@@ -4,16 +4,16 @@ function weatherResponse(response) {
     temperatureNumber.innerHTML = Math.round(temperature);
     let cityResult = document.querySelector("#weather-city");
     cityResult.innerHTML = response.data.city;
-    let description = document.querySelector("weather-Description");
+    let description = document.querySelector("#weather-Description");
     description.innerHTML = response.data.condition.description;
-    let humidity = document.querySelector("humidityInfo");
+    let humidity = document.querySelector("#humidityInfo");
     humidity.innerHTML = `${response.data.temperature.humidity}%`;
     let windSpeed = document.querySelector("#speed-wind");
     windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
     let time = document.querySelector("#time-details");
     let date = new Date(response.data.time * 1000);
 
-    time.innerHTML = dateFormat[date];
+    time.innerHTML = dateFormat(date);
     let weatherIcon = document.querySelector("#icon")
     weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
     
@@ -30,22 +30,23 @@ if (minutes < 10){
 }
  
 return `${day} ${hours}:${minutes};
-
 }
 
-function formResult(city) {
+function cityResult(city) {
     let apiKey = "aod048etf33b73a958b75839ca060b4e";
-    let apiUrl = https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-   axios.get(apiUrl).then(cityresponse);
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unit=metric`;
+axios.get(apiUrl).then(weatherResponse);
 }
+
 
 function WeatherSearch(event) {
     event.preventDefault();
     let searchResult = document.querySelector("#serch-input")
      let cityResult = document.querySelector("#weather-city")
     cityResult.innerHTML = searchResult.value;
-formResult(searchResult.value);
-    }let formSearchElement = document.querySelector("form-search");
+cityResultResult(searchResult.value);
+    }
+    let formSearchElement = document.querySelector("form-search");
 formSearchElement.addEventListener("submit",WeatherSearch);
 
-formResult(Canada)
+cityResult("Canada");
