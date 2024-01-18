@@ -32,6 +32,7 @@ if (minutes < 10){
 return `${day} ${hours}:${minutes}`;
 }
 function cityResult(city) {
+    console.log(cityResult)
     let apiKey = "aod048etf33b73a958b75839ca060b4e";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(weatherResponse);
@@ -41,9 +42,7 @@ function cityResult(city) {
 
 function WeatherSearch(event) {
     event.preventDefault();
-    let searchResult = document.querySelector("#serch-input")
-     let cityResult = document.querySelector("#weather-city")
-    cityResult.innerHTML = searchResult.value;
+    let searchResult = document.querySelector("#serch-input");
 cityResultResult(searchResult.value);
     }
     let formSearchElement = document.querySelector("form-search");
