@@ -79,8 +79,9 @@ font-size: 26px;
 }
 
 .weather-foretell{
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 28px;
 }
 .forecast-temperature {
     font-size: 14px;
