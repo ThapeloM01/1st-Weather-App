@@ -51,7 +51,7 @@ cityResult(searchResult.value);
      let days = [ "Tue", "Wed", "Thur", "Fri", "Sat",
 ];
      days.forEach( function (day) {
-    let weatherCasting = "" 
+    let weatherCasting = ""; 
     weatherCasting = weatherCasting + ` 
             <div class="Outlook">
                 <div class="weather-foretell-1stDay">
@@ -65,7 +65,7 @@ cityResult(searchResult.value);
               </div>
             </div>`;
      });
-     weatherCast.innerHTML =  weatherCasting;    
+     weatherCast.innerHTML = weatherCasting;    
     }
     let formSearchElement = document.querySelector("#form-search");
 formSearchElement.addEventListener("submit", WeatherSearch);
