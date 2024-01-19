@@ -83,6 +83,12 @@ font-size: 26px;
     justify-content: space-around;
     margin-top: 28px;
 }
+.weatherForetell-icon {
+    display: block;
+    margin: 0 auto;
+    width: 88px;
+    height: 88px;
+}
 .forecast-temperature {
     font-size: 14px;
 }
