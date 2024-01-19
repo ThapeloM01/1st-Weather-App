@@ -16,6 +16,8 @@ function weatherResponse(response) {
     time.innerHTML = dateFormat(date);
     let weatherIcon = document.querySelector("#icon")
     weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+    ForecastData(response.data.city);
     
 }
 function dateFormat(date) {
@@ -46,7 +48,13 @@ function WeatherSearch(event) {
 cityResult(searchResult.value);
     }
 
-    function Forecast (){
+    function ForecastData(city) {
+        let apiKey = "aod048etf33b73a958b75839ca060b4e";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+        axios(apiKey).get(Forecast);
+    }
+
+    function Forecast (response){
     let weatherCast = document.querySelector("#weather-foretell");
      let days = [ "Tue", "Wed", "Thur", "Fri", "Sat"];
      let weatherCasting = "";
@@ -70,4 +78,3 @@ cityResult(searchResult.value);
 formSearchElement.addEventListener("submit", WeatherSearch);
 
 cityResult("Canada");
-Forecast();
