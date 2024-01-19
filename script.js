@@ -45,7 +45,30 @@ function WeatherSearch(event) {
     let searchResult = document.querySelector("#search-input");
 cityResult(searchResult.value);
     }
+
+    function Forecast (){
+    let weatherCast = document.querySelector("#weather-foretell");
+     let days = [ "Tue", "Wed", "Thur", "Fri", "Sat",
+];
+     days.forEach( function (day) {
+    let weatherCasting = "" 
+    weatherCasting = weatherCasting + ` 
+            <div class="Outlook">
+                <div class="weather-foretell-1stDay">
+                   ${day}
+                </div>
+                <div class="weatherForetell-icon">☀️</div>
+              <div class="forecast-temperature">
+                 <div class="temperature-max"> <strong>23°C</strong>
+                 </div>
+                 <div class="temperature-min">10°C</div>
+              </div>
+            </div>`;
+     });
+     weatherCast.innerHTML =  weatherCasting;    
+    }
     let formSearchElement = document.querySelector("#form-search");
 formSearchElement.addEventListener("submit", WeatherSearch);
 
 cityResult("Canada");
+Forecast();
