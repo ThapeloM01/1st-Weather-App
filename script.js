@@ -48,10 +48,9 @@ cityResult(searchResult.value);
 
     function Forecast (){
     let weatherCast = document.querySelector("#weather-foretell");
-     let days = [ "Tue", "Wed", "Thur", "Fri", "Sat",
-];
+     let days = [ "Tue", "Wed", "Thur", "Fri", "Sat"];
+     let weatherCasting = "";
      days.forEach( function (day) {
-    let weatherCasting = ""; 
     weatherCasting = weatherCasting + ` 
             <div class="Outlook">
                 <div class="weather-foretell-1stDay">
