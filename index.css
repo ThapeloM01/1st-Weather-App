@@ -38,20 +38,18 @@ header{
 
 .weather-city{
     margin: 0;
-    font-size:30px ;
+    font-size:36px ;
     line-height: 48px;
 }
 
 .weather-details {
+    font-weight: 450;
 font-size: 16px;
-line-height: 20px;
+line-height: 22px;
 }
 
 .weather-details strong {
     color: bisque;
-    font-size: 25px;
-    line-height: 20px;
-    font-weight:450 ;
 }
 main{
     padding: 3opx;
@@ -68,17 +66,16 @@ main{
 
 .temperature-value {
     font-size: 90px;
-    margin-left: 10px;
     font-weight: bold;
     line-height: 88px;
 }
 .temperature-unit {
 margin-top: 16px ;
-font-size: 48px;
+font-size: 26px;
 }
-.temperature-icon {
-    font-size: 44px;
-    margin-top: 22px;
+.icon {
+    width: 88px;
+    height: 88px;
 }
 footer{
     border-top: 1px solid #f9f7fe;
