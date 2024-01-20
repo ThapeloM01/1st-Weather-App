@@ -1,39 +1,48 @@
 body {
-    background-color: azure;
-    font-family: Arial, Helvetica, sans-serif;
+    background: #f5c7f7;
+    font-family: 'Pacifico', cursive;
+;
 }
 
 .styling {
-    background: white;
+    background: linear-gradient(359deg, rgb(150, 192, 255) -17.7%, rgb(255, 180, 161) 101.5%);
     max-width: 600px ;
     margin: 45px auto;
     padding: 30px;
     box-shadow: 0 30px 50px rgb(65, 50, 100, 0.00);
     border-radius: 16px;
+    
 }
 header{
-    border-bottom: 1px solid #f9f7fe;
-    padding:0 0 30px 0;
+
+    padding:0 0 30px ;
+}
+
+.form-search {
+    color:  #c50d66;
+
 }
 
 .search-input {
-    background-color: aliceblue;
+    background-color: #ffe9e3;
+    color:  #9896f1;
+    font-family:'Pacifico', cursive ;
     border: none;
     padding: 15px 20px;
     width: 80%;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .submit-input {
-    background-color: bisque
-    ;
-    font-size: 16px;
+    background: #ffe9e3;
+    color: #9ba6a5;
+    font-family:'Pacifico', cursive ;
+    font-size: 19px;
     margin-left: 5px;
     border: none;
     padding: 15px 30px;
     border-radius: 6px;
-    color: white;
 }
 
 .weather-city{
@@ -45,15 +54,29 @@ header{
 .weather-details {
     font-weight: 450;
 font-size: 16px;
-line-height: 22px;
+font-weight: 500;
+line-height: 24px;
+}
+#speed-wind {
+    color: #7c73e6;
+}
+
+#HumidityInfo {
+    color: #7c73e6;
+}
+
+strong {
+ color: #7c73e6; 
 }
 
 .weather-details strong {
     color: bisque;
 }
 main{
+    color:  #9896f1;
     padding: 3opx;
 }
+
 .weather-info {
     display: flex;
     justify-content: space-between;
@@ -70,8 +93,8 @@ main{
     line-height: 88px;
 }
 .temperature-unit {
-margin-top: 16px ;
-font-size: 26px;
+margin-top: 6px ;
+font-size: 27px;
 }
 .icon {
     width: 88px;
@@ -99,10 +122,12 @@ font-size: 26px;
 .temperature-min {
     opacity: 0.4;
 }
-footer{
-    border-top: 1px solid #f9f7fe;
+a {
+   color: #7c73e6;
+}
+footer{ 
     padding: 30px 0 0 0;
     text-align: center;
     font-size: 14px;
-    color: blueviolet;
+    color: #9896f1 ;
 }

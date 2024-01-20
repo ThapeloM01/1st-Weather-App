@@ -51,22 +51,19 @@ cityResult(searchResult.value);
     function DailyDate(timestamp) {
         let date = new Date (timestamp * 1000);
         let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-        return days [date.getDay];
+        return days [date.getDay()];
     }
 
     function ForecastData(city) {
         let apiKey = "aod048etf33b73a958b75839ca060b4e";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-        axios(apiKey).get(Forecast);
+        let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+        axios(apiUrl).then(Forecast);
     }
 
     function Forecast (response){
-    let weatherCast = document.querySelector("#weather-foretell");
-     
-        
-     
      let weatherCasting = "";
-     response.data.daily.forEach( function (day, index) {
+
+     response.data.daily.forEach(function (day, index) {
        if (index < 5) {
     weatherCasting =
       weatherCasting +
@@ -92,6 +89,7 @@ cityResult(searchResult.value);
             </div>`;
                  }         
      });
+     let weatherCast = document.querySelector("#weather-foretell");
      weatherCast.innerHTML = weatherCasting;    
     }
     let formSearchElement = document.querySelector("#form-search");
